@@ -1,19 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+// import ReactDOM from 'react-dom';
+// import ReactDOM, { render } from 'react-dom';
+import App from "./components/app/app";
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+import { createRoot } from "react-dom/client";
+const container = document.getElementById("root");
+const root = createRoot(container!);
+
+const Setting = {
+    countPlaceCard2: 6,
+};
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <App
+            countPlaceCard = {Setting.countPlaceCard2}
+        />
+    </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
