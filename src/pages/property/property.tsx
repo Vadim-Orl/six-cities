@@ -1,6 +1,12 @@
-export default function PropertyScreen(): JSX.Element {
+import {RouteProps} from "react-router-dom";
+import { useParams } from "react-router-dom";
+
+
+export default function PropertyScreen(props: RouteProps): JSX.Element {
+  const { id } = useParams(); 
     return (
 <div className="page">
+  <h1>{id}</h1>
       <header className="header">
         <div className="container">
           <div className="header__wrapper">
