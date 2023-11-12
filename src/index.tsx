@@ -1,20 +1,16 @@
 import React from "react";
-// import ReactDOM from 'react-dom';
-// import ReactDOM, { render } from 'react-dom';
 import App from "./components/app/app";
-
 import { createRoot } from "react-dom/client";
+import { offersMocks } from "./mocks/offers";
+
+
 const container = document.getElementById("root");
 const root = createRoot(container!);
 
-const Setting = {
-    countPlaceCard2: 6,
-};
-
 root.render(
-    <React.StrictMode>
-        <App
-            countPlaceCard = {Setting.countPlaceCard2}
-        />
-    </React.StrictMode>
+  <React.StrictMode>
+    <App
+      offers = {offersMocks}
+    />
+  </React.StrictMode>
 );
