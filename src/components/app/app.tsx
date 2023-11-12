@@ -1,6 +1,6 @@
 import MainScreen from "../../pages/home/home-screen";
 import {BrowserRouter, Routes , Route, Navigate} from "react-router-dom";
-import FavoritesScreen from "../../pages/favorites/favorites";
+import FavoritesScreen from "../../pages/favorites/favorites-screen";
 import LoginScreen from "../../pages/login/login-scxreen";
 import OfferScreen from "../../pages/offers/offer";
 import NotFoundPageScreen from "../../pages/error/errorNotFound";
