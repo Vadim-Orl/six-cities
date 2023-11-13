@@ -1,9 +1,8 @@
 import {useState} from "react"
-
 import {Offer} from "../../types/offer"
 import OfferCardsList from "../../components/offer-cards/offer-cards";
 import Header from "../../components/header/header";
-
+import Map from "../../components/map/map";
 type HomeScreenProps = {
   offers: Offer[];
 }
@@ -15,6 +14,7 @@ export default function HomeScreen({offers} : HomeScreenProps): JSX.Element {
 
   function handleCardHover(id :string|null): void {
     setSelectedPoint(id);
+
   }
 
   return (
@@ -61,7 +61,17 @@ export default function HomeScreen({offers} : HomeScreenProps): JSX.Element {
           </section>
         </div>
         <div className="cities" >
-          <OfferCardsList offers = {offers} handleCardHover = {handleCardHover}/>
+          <div className="cities__places-container container">
+            <OfferCardsList offers = {offers} handleCardHover = {handleCardHover}/>
+            <div className="cities__right-section">
+              <div className='cities__right-section'> 
+                <Map cityMap={offers[0].city} offers={offers} selectedPoint={selectedPoint} />
+              </div>
+          
+              {/* <Map cityMap={offers[0].city} offers={offers} selectedOffer={selectedPoint} /> */}
+              {/* <section id='map'  className='cities__map' ></section>; */}
+            </div>
+          </div>
         </div>
       </main>
     </div>
