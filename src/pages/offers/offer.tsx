@@ -1,6 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
 import { Offer } from "../../types/offer";
-import NotFoundPageScreen from "../error/errorNotFound";
+// import NotFoundPageScreen from "../error/errorNotFound";
 import Header from "../../components/header/header";
 import { AppRoute } from "../../const";
 import FormReview from "../../components/form-review/form-review";
