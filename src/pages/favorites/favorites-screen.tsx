@@ -22,7 +22,6 @@ const favoritesFilter = ( offers : Offers) => {
 
   const tmp =  Object.values(favoritesOffers.reduce(
     (acc : TFavoritesFilter, person:Offer) => {
-      // debugger
       const name = person.city.name;
       acc[name] ??= [];
       acc[name].push({ ...person });

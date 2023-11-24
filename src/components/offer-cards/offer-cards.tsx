@@ -7,6 +7,9 @@ type TOfferCardsList = {
   handleCardHover: (id: string | null) => void
 }
 
+
+
+
 export default function OfferCardsList({offers, handleCardHover}: TOfferCardsList): JSX.Element {
 
   function clickCard(evt: React.MouseEvent<HTMLDivElement, MouseEvent>): void {

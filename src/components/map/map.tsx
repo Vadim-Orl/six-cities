@@ -22,6 +22,29 @@ const currentCustomIcon = new Icon({
   iconAnchor: [20, 40],
 });
 
+// L.marker([country[0], country[1]], {
+//   icon: L.divIcon({
+//     iconSize: "auto",
+//     html: "<b>" + country[2] + "</b>"
+//   })
+
+const myIcon = L.divIcon({
+  className: 'my-div-icon',
+  html: `<img src=${URL_MARKER_DEFAULT}><div class="pin">12</div>`,
+  iconSize: [30, 30],
+  iconAnchor: [20, 40]
+});
+
+const addNewIcon = (urlIcon: string , price: number) => {
+  return L.divIcon({
+    className: 'my-div-icon',
+    html: `<img src=${URL_MARKER_DEFAULT}><div class="pin">${price}</div>`,
+    iconSize: [27, 39],
+    iconAnchor: [20, 40]
+  });
+}
+
+
 export default function Map({ offers, cityMap, selectedPoint }: MapProps): JSX.Element {
   const mapRef = useRef(null);
   const map = useMap(mapRef, cityMap);
@@ -44,7 +67,7 @@ export default function Map({ offers, cityMap, selectedPoint }: MapProps): JSX.E
         });
         
         marker.bindPopup('Hi Welcome to Tutorialspoint').openPopup();
-        marker.setIcon(selectedPoint !== null && offer.id === selectedPoint ? icon : defaultCustomIcon).addTo(markerLayer);
+        marker.setIcon(selectedPoint !== null && offer.id === selectedPoint ? currentCustomIcon : addNewIcon(URL_MARKER_DEFAULT, offer.price)).addTo(markerLayer);
       });
 
       return () => {
