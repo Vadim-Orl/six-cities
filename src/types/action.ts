@@ -1,6 +1,9 @@
+import { SortOption } from "../const";
+
 export enum ActionType {
-  ChangeSities = 'map/changeSities',
-  AddOfferSities = 'map/addOfferSities',
+  ChangeSities = 'nav/changeSities',
+  AddOfferSities = 'nav/addOfferSities',
+  ChangeSortType = 'offersCity/changeTypeSort'
 }
 
 export type ChangeSitiesAction = {
@@ -9,7 +12,12 @@ export type ChangeSitiesAction = {
 }
 
 export type AddOfferSitiesAction = {
-  type: ActionType.AddOfferSities
+  type: ActionType.AddOfferSities;
 }
 
-export type Actions = ChangeSitiesAction | AddOfferSitiesAction;
+export type ChangeSortTypeAction = {
+  type: ActionType.ChangeSortType;
+  payload: SortOption;
+ }
+
+export type Actions = ChangeSitiesAction | AddOfferSitiesAction | ChangeSortTypeAction;

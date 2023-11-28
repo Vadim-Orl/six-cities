@@ -10,10 +10,10 @@ export default function useMap(mapRef: MutableRefObject<HTMLElement | null>, cit
     if (mapRef.current !== null && !isRenderedRef.current) {
       const instance = new Map(mapRef.current, {
         center: {
-          lat: 52.37454,
-          lng: 4.897976,
+          lat: cityMap.location.latitude,
+          lng: cityMap.location.longitude,
         },
-        zoom: 12,
+        zoom: cityMap.location.zoom,
       });
 
       const layer = new TileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {

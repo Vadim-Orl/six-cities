@@ -1,4 +1,3 @@
-import { AppRoute } from "../../const";
 import {Offer} from "../../types/offer"
 import { Link} from 'react-router-dom';
 
@@ -20,9 +19,8 @@ export default function PlaceCard({cardItem, handleCardHover} : PlaceCardProps):
     handleCardHover('');
   }
 
-  console.log(id)
   return (
-    <article  className="cities__place-card place-card ww" key={id} id={id} onMouseEnter={onMouseEnterCard} onMouseLeave={onMouseLeaveCard}>
+    <article  className="cities__place-card place-card" key={id} id={id} onMouseEnter={onMouseEnterCard} onMouseLeave={onMouseLeaveCard}>
       <div className="cities__image-wrapper place-card__image-wrapper">
         <Link to={`/offer/${id}`}>
           <img className="place-card__image" src={previewImage} width="260" height="200" alt="Place" />

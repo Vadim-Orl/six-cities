@@ -3,7 +3,7 @@ import { Offer } from '../types/offer';
 export const offersMocks: Offer[] = [
   {
     city: {
-      name: 'Amsterdam',
+      name: 'Paris',
       location: {
         latitude: 52.377159760215655, 
         longitude: 4.894847666239248,
@@ -199,7 +199,7 @@ export const offersMocks: Offer[] = [
     type: 'hotel',
     bedrooms: 4,
     maxAdults: 4,
-    price: 330,
+    price: 70,
     goods: [
       'Breakfast',
       'Washer',

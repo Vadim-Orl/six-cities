@@ -1,4 +1,3 @@
-import { Comment } from "./comment"
 
 export type Location = {
   latitude: number,
@@ -8,7 +7,7 @@ export type Location = {
 
 export type City = {
   name: string,
-      location: Location
+  location: Location
 }
 
 export type Host = {

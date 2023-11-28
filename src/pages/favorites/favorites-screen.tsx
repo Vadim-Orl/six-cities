@@ -1,4 +1,4 @@
-import { Offers , Offer, City} from "../../types/offer";
+import { Offers , Offer} from "../../types/offer";
 import FavoritesLocations from "../../components/favorites-locations/favorites-locations";
 import Header from "../../components/header/header";
 

@@ -1,4 +1,4 @@
-import { CitysNames } from "../const"
+import { CitysNames, SortOption} from "../const"
 import { offersMocks } from "../mocks/offers"
 import { ActionType, Actions } from "../types/action";
 import { Offers } from "../types/offer"
@@ -8,9 +8,15 @@ const newOfferListCities = (city: string): Offers =>{
   return offersMocks.filter((offer => offer.city.name.toUpperCase() == city.toUpperCase()));
 }
 
+const SortOffers = (offers: Offers) => {
+  return offers;
+}
+
 const initialState = {
-  city: CitysNames.Amsterdam,
-  offersFilter: newOfferListCities(CitysNames.Amsterdam),
+  city: CitysNames.Paris,
+  offersCity: newOfferListCities(CitysNames.Paris),
+  offersFilter: [],
+  activeSorting: SortOption.Popular,
 }
 
 const reducer = (state: State = initialState, action: Actions): State =>{
@@ -18,7 +24,9 @@ const reducer = (state: State = initialState, action: Actions): State =>{
   case ActionType.ChangeSities:
     return {...state, city: action.payload};
   case ActionType.AddOfferSities:
-    return {...state, offersFilter: newOfferListCities(state.city)}
+    return {...state, offersCity: newOfferListCities(state.city)};
+  case ActionType.ChangeSortType:
+    return {...state, activeSorting: action.payload};
   default:
     return state;
   }
