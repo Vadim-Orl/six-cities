@@ -1,9 +1,10 @@
 import {Offer} from "../../types/offer"
+import { Link} from 'react-router-dom';
 
 
 type PlaceCardProps = {
-    cardItem: Offer
-    handleCardHover?: any
+    cardItem: Offer,
+    handleCardHover?: any,
 }
 
 
@@ -11,20 +12,23 @@ export default function PlaceCard({cardItem, handleCardHover} : PlaceCardProps):
   const {previewImage, title, rating, type, price, isFavorite, id} = cardItem;
 
   function onMouseEnterCard(): void {
-    handleCardHover(id);
+    if (handleCardHover) {
+      handleCardHover(id);
+    }
   }
 
   function onMouseLeaveCard() :void {
-    handleCardHover('');
+    if (handleCardHover) {
+      handleCardHover('');
+    }
   }
 
-  console.log(id)
   return (
-    <article  className="cities__place-card place-card ww" key={id} id={id} onMouseEnter={onMouseEnterCard} onMouseLeave={onMouseLeaveCard}>
+    <article  className="cities__place-card place-card" key={id} id={id} onMouseEnter={onMouseEnterCard} onMouseLeave={onMouseLeaveCard}>
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="/">
+        <Link to={`/offer/${id}`}>
           <img className="place-card__image" src={previewImage} width="260" height="200" alt="Place" />
-        </a>
+        </Link>
       </div>
       <div className="place-card__info">
         <div className="place-card__price-wrapper">

@@ -1,0 +1,14 @@
+.my-div-icon {
+  background-image: 'img/pin.svg';
+  width: 27px;
+}
+
+.pin {
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+
+  border: 1px solid black
+}

@@ -1,58 +1,6 @@
-import { Offer } from '../types/offer';
+import { Offers } from '../types/offer';
 
-export const offersMocks: Offer[] = [
-  {
-    city: {
-      name: 'Paris',
-      location: {
-        latitude: 52.377159760215655, 
-        longitude: 4.894847666239248,
-        zoom: 13
-      }
-    },
-    previewImage: 'https://14.react.pages.academy/static/offer/3.jpg',
-    images: [
-      'https://14.react.pages.academy/static/offer/16.jpg',
-      'https://14.react.pages.academy/static/offer/13.jpg',
-      'https://14.react.pages.academy/static/offer/6.jpg',
-      'https://14.react.pages.academy/static/offer/11.jpg',
-      'https://14.react.pages.academy/static/offer/14.jpg',
-      'https://14.react.pages.academy/static/offer/9.jpg',
-      'https://14.react.pages.academy/static/offer/2.jpg',
-      'https://14.react.pages.academy/static/offer/15.jpg',
-      'https://14.react.pages.academy/static/offer/7.jpg',
-      'https://14.react.pages.academy/static/offer/17.jpg',
-      'https://14.react.pages.academy/static/offer/4.jpg',
-      'https://14.react.pages.academy/static/offer/8.jpg',
-      'https://14.react.pages.academy/static/offer/10.jpg',
-      'https://14.react.pages.academy/static/offer/5.jpg'
-    ],
-    title: 'Waterfront with extraordinary view',
-    isFavorite: true,
-    isPremium: false,
-    rating: 4.8,
-    type: 'room',
-    bedrooms: 1,
-    maxAdults: 2,
-    price: 142,
-    goods: [
-      'Laptop friendly workspace',
-      'Breakfast'
-    ],
-    host: {
-      id: 25,
-      name: 'Angelina',
-      isPro: true,
-      avatarUrl: 'img/avatar-angelina.jpg'
-    },
-    description: 'A new spacious villa, one floor. All commodities, jacuzzi and beautiful scenery. Ideal for families or friends.',
-    location: {
-      latitude: 52.3909553943508,
-      longitude: 4.85309666406198,
-      zoom: 16
-    },
-    id: '1'
-  },
+export const OffersNearMocks: Offers = [
   {
     city: {
       name: 'Amsterdam',
