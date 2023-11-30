@@ -1,11 +1,10 @@
 import MainScreen from "../../pages/home/home-screen";
-import {BrowserRouter, Routes , Route, Navigate} from "react-router-dom";
+import {BrowserRouter, Routes , Route} from "react-router-dom";
 import FavoritesScreen from "../../pages/favorites/favorites-screen";
 import LoginScreen from "../../pages/login/login-scxreen";
 import OfferScreen from "../../pages/offers/offer";
 import NotFoundPageScreen from "../../pages/error/errorNotFound";
 import OfferNotLoggedScreen from "../../pages/offers/offer-not-logged";
-import PlaceCard from "../place-card/place-card";
 import {Offers} from "../../types/offer"
 import { PrivateRoute } from "../private-route/private-route";
 import {AppRoute} from "../../const";

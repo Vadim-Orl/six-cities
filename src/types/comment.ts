@@ -12,3 +12,5 @@ export type Comment = {
     date: string,
     rating: number,
 }
+
+export type TListReviews = Comment []

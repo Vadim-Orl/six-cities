@@ -3,8 +3,8 @@ import { Link} from 'react-router-dom';
 
 
 type PlaceCardProps = {
-    cardItem: Offer
-    handleCardHover?: any
+    cardItem: Offer,
+    handleCardHover?: any,
 }
 
 
@@ -12,11 +12,15 @@ export default function PlaceCard({cardItem, handleCardHover} : PlaceCardProps):
   const {previewImage, title, rating, type, price, isFavorite, id} = cardItem;
 
   function onMouseEnterCard(): void {
-    handleCardHover(id);
+    if (handleCardHover) {
+      handleCardHover(id);
+    }
   }
 
   function onMouseLeaveCard() :void {
-    handleCardHover('');
+    if (handleCardHover) {
+      handleCardHover('');
+    }
   }
 
   return (

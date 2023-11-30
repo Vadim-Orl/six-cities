@@ -46,7 +46,7 @@ export default function Map({ offers, cityMap, selectedPoint }: MapProps): JSX.E
     if (map) {
       const markerLayer = layerGroup().addTo(map);
       
-      offers.forEach((offer: { location: any; id: any; price:any }) => {
+      offers.forEach((offer: { location: any; id: string | undefined; price: number }) => {
         const point = offer.location;
         const marker = new Marker({
           lat: point.latitude,
@@ -63,5 +63,5 @@ export default function Map({ offers, cityMap, selectedPoint }: MapProps): JSX.E
     }
   }, [map, offers, selectedPoint]);
 
-  return <section id='map' ref={mapRef} className='cities__map map' style={{height: "500px", width:"700px"}} ></section>;
+  return <section id='map' ref={mapRef} className='cities__map map' style={{height: "500px", width:"100%"}} ></section>;
 }

@@ -8,10 +8,6 @@ const newOfferListCities = (city: string): Offers =>{
   return offersMocks.filter((offer => offer.city.name.toUpperCase() == city.toUpperCase()));
 }
 
-const SortOffers = (offers: Offers) => {
-  return offers;
-}
-
 const initialState = {
   city: CitysNames.Paris,
   offersCity: newOfferListCities(CitysNames.Paris),

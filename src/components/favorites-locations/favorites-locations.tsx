@@ -1,4 +1,4 @@
-import { Offers, Offer } from "../../types/offer"
+import { Offers } from "../../types/offer"
 
 type TFavoritesLocations = {
   filterOffers?: Offers[]
